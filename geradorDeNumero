@@ -1,0 +1,39 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class tigrinho {
+
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+Random rdn = new Random();
+int opcao = 0;
+int escolha = 0;
+do {
+System.out.println("Voce gostaria de jogar?");
+System.out.println("1 - Sim \n2 - Não\n");
+escolha = sc.nextInt();
+
+switch(escolha){
+case 1:
+System.out.println("Digite seu numero da sorte");
+int numero = sc.nextInt();
+int numeroAleatorio = rdn.nextInt(100) + 1;
+System.out.println(numeroAleatorio);
+if (numero == numeroAleatorio) {
+System.out.println("Você ganhou");
+} else {
+System.out.println("Você perdeu!");
+}
+break;
+case 2:
+System.exit(0);
+default:
+System.out.println("Não válida");
+}
+
+} while (opcao != 9);
+
+sc.close();
+}
+
+}
